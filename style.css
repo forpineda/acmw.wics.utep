@@ -1,0 +1,572 @@
+html{}
+/* Part 1: Navbar */
+
+/* General style rule set for all items in ul */
+.navbar ul {
+  background-color: #005E7D;
+  text-align: center; 
+  padding: 10px 0;
+  font-size: 16px; 
+  list-style-type: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin-top: 0px;
+  z-index: 1000;
+  color: white;
+  display: flex; /* Use flexbox for centering */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+}
+.navbar img {
+  max-width: 100px;
+  height: auto;
+  width: 80%;
+  border-radius: 10%;
+}
+
+/* Style rule set for individual li */
+.navbar ul li {
+  color: white;
+  margin: 0px;
+  margin-top: 0px;
+  display: inline-block; /* Align list items horizontally */
+}
+
+
+/* Style rule set for individual li link */
+.navbar ul li a {
+    font-family: bungee;
+    text-align: center;
+    font-size: 20px;
+    display: block;
+    text-decoration: none;
+    color: lightpink;
+    padding: 10px 15px;
+    margin-top: 0px;
+}
+
+/* Style rule set for hovered link */
+.navbar ul li a:hover {
+  /*background-color: #555; */
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  margin-top: 0px;
+}
+
+/* Part 2: Flexbox */
+
+/* General style rule set for flex container */
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+/* Style rules for flex-item 1 */
+.flex-item:nth-of-type(1) {
+
+}
+/* Style rules for flex-item 2 */
+.flex-item:nth-of-type(2) {
+
+}
+/* Style rules for flex-item 3 */
+.flex-item:nth-of-type(3) {
+
+}
+/* Style set for all flex-items */
+.flex-item {
+    background: white;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+body {
+  overflow-x: hidden;
+    /* Add a background color or image */
+    background-color: aliceblue;
+    background-image: url('');
+
+    /* Customize the font, size, and color for text*/
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    color: darkblue;
+    text-align: center;
+
+    /* Adjust the padding and margins */
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+/*
+  Style Text
+*/
+h1 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    color: #6A0572;
+  text-align: center;
+}
+h2 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    color: midnightblue;
+  text-align: center;
+}
+h3 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    color: #B76E79;
+  text-align: center;
+}
+p {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    color: #616161;
+  text-align: center;
+}
+a:link {
+    color: #0077cc; 
+    text-decoration: none; 
+  text-align: center;
+}
+a:visited {
+    color: #551a8b; 
+    text-decoration: none; 
+}
+a:hover {
+    color: #ff6600; 
+    text-decoration: underline; 
+}
+a:active {
+    color: #ff0000; /*(clicked) */
+    text-decoration: underline; 
+}
+
+.diffback{
+  background-color: lightpink;  
+  color: #fff; /* Set text color to be visible on the background */
+  padding: 20px; /* Adjust padding based on your design */
+  border: 10px solid #333; /* Add a border with a color of your choice */
+  border-radius: 10px; /* Optional: Add rounded corners for a softer look */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/*
+  Style Lists
+*/
+ol {
+
+}
+ol li {
+
+}
+ul {
+  list-style: square; /* List style type */
+  padding-left: 20px;
+}
+ul li {
+
+}
+.special-text {
+  color: red; 
+  font-weight: bold; 
+  text-transform: uppercase; 
+  font-size: 18px; 
+}
+#unique-element {
+  background-color: #0077cc; /* Background color */
+  color: white; /* Text color */
+  font-family: 'Helvetica Neue', sans-serif; /* Font family */
+  text-align: center; /* Text alignment */
+  font-size: 24px; /* Larger font size */
+}
+
+/*
+  Style Buttons
+*/
+button {
+  background-color:  #008CBA;
+  border: none;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  padding: 15px 32px;
+  cursor: pointer;
+}
+.header-container {
+  background-image: url('WiCS.jpg');
+  background-size: cover; 
+  background-position: center; /* Center the background image */
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  padding-top: 30px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+}
+.header-img img{
+  max-width: 200px;
+  height: auto;
+  margin: 10px 20px;
+  width: 80%;
+  border-radius: 50%;
+}
+.header-item:nth-of-type(1) {
+  float: left;
+  width: 35%;
+}
+.header-item:nth-of-type(2) {
+  float: right;
+  width: 65%;
+}
+.header-button {
+  background-color: darkred;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin: 5px;
+  display: inline-block;
+  text-align: center;
+  font-size: 18px;
+  cursor: poiner;
+  border: 2px solid black;
+}
+
+.footer {
+    background-color: black;
+    color: #fff;
+    padding: 30px 0;
+    font-family: 'Montserrat', monospace;
+    font-weight: bold;
+}
+
+.footer .container {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.footer .col-md-4 {
+    flex: 1;
+    max-width: 33%;
+    text-align: center;
+}
+
+.footer h3 {
+    margin-bottom: 15px;
+    color: #6A0572;
+}
+
+.footer ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0;
+}
+
+.footer li {
+    margin-bottom: 10px;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons li a {
+    color: white;
+    font-size: 30px;
+}
+
+
+.body-img{
+  /*size: cover;*/
+  height: auto;
+  width: auto;
+}
+
+
+/* Add style to button */
+#theme-button {
+  text-decoration: underline; 
+  font-family: 'Helvetica Neue', sans-serif; /* Change the font of the text */
+  color: white; /* Change the text color to white */
+  padding: 10px 20px; /* Add padding to increase the clickable area */
+  border: 2px solid darkgoldenrod; /* Add a solid border with a color */
+  border-radius: 5px; /* Add rounded corners */
+}
+
+/* Customize Dark Mode Theme */
+.dark-mode {
+  background-color: darkblue;
+  color: white;
+}
+
+/* Set up Flexbox for the petition container */
+.petition-container {
+  display: flex;          /* Display children in a row */
+  flex-direction: row;    /* Align children in a row */
+  gap: 20px;              /* Space between children */
+  width: 100%;            /* Occupy the full width */
+  padding-bottom: 50px;   /* Add padding at the bottom */
+}
+
+/* Style for the petition paragraph */
+.petition-para {
+  width: 55%;             /* Occupy 55% of the container width */
+  padding-right: 10px;    /* Add some right padding */
+}
+
+/* Style for the signatures */
+.signatures {
+  width: 45%;             /* Occupy 45% of the container width */
+  padding-right: 10px;    /* Add some right padding */
+}
+
+
+/* Add to CSS file */
+.error {
+  border-style: solid;
+  border-width: 2px;
+  border-color: red;
+  background:pink;
+}
+
+let animation {
+  revealDistance: 150,
+  initialOpacity: 0,
+  transitionDelay: 0,
+  transitionDuration: '2s',
+  transitionProperty: 'all',
+  transitionTimingFunction: 'ease'
+};
+
+/* Add this to your CSS file */
+
+/* Style for revealable elements */
+.revealable {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+/* Style for revealed elements */
+.revealable.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+<style>
+  /* the modal that covers the background and prevents user interactions */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* box that contains all the content and images */
+  .modal-content {
+    background-color: lightsteelblue;
+    color: black;
+    text-align: center;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #thanks-modal-content {
+    width: 20rem;
+  }
+
+  #modal-text-container {
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
+
+/* Add the following styles for the modal close button */
+#modal-close-button {
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* Add the following styles to the body when the modal is open */
+body.modal-open {
+  overflow: hidden; /* Prevent scrolling when the modal is open */
+}
+
+/* Add the following styles for the reduce motion button */
+#reduceMotionButton {
+  text-decoration: underline;
+  font-family: 'Helvetica Neue', sans-serif;
+  color: white;
+  padding: 10px 20px;
+  border: 2px solid darkgoldenrod;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+.revealable {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+/* Add the styles for the revealed elements */
+.revealable.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Officer Pictures*/
+
+.container{
+  width: auto; /* 100% */
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: wrap;
+}
+.container .card{
+  position: relative;
+  width: auto; 
+  height: auto;
+  margin: 10px;
+  padding: 15px;
+  background: linear-gradient(60deg, #e91e63 0%, #03a9f4 100%);
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+  transition: 0.3s ease;
+}
+.container .card h2{
+  z-index: 99;
+  position: absolute;
+  bottom: 25px;
+  right: auto;
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.2s ease;
+  text-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+.container .card p{
+  z-index: 99;
+  position: absolute;
+  bottom: 70px;
+  right: 130px;
+  width: 150px;
+  font-size: 12px;
+  color: #fff;
+  opacity: 0;
+  text-align: right;
+  letter-spacing: 1px;
+  transition: 0.2s ease;
+}
+.container .card span{
+  z-index: 99;
+  position: absolute;
+  top: 60px;
+  right: 35px;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 1px;
+  writing-mode: vertical-lr;
+  transition: 0.2s ease;
+  opacity: 0.7;
+}
+.container .card .pic{
+  z-index: 100;
+  background-size: cover;
+  border-radius: 12px;
+  filter: grayscale(100%);
+  transition: 0.3s ease;
+}
+.container .card button{
+  position: absolute;
+  right: 30px;
+  bottom: 40px;
+  width: 30px;
+  height: 30px;
+  background-color: #772a9b;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  outline: none;
+  opacity: 1;
+  transition: 0.3s ease;
+}
+.container .card .icon-container {
+  position: absolute;
+  bottom: 10px;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: 0.2s ease;
+}
+
+.container .card .icon-container .icon {
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.container .card:hover .icon-container {
+  opacity: 1;
+  right: 0px;
+}
+.container .card:hover button{
+  transform: scale(16.5);
+  opacity: 0.5;
+}
+.container .card:hover h2{
+  bottom: 80px;
+  right: 50px;
+}
+.container .card:hover p{
+  opacity: 1;
+  right: 60px;
+}
+.container .card:hover span{
+  opacity: 0;
+  top: 80px;
+}
+.container .card:hover .pic{
+  filter: grayscale(0);
+  width: 470px;
+}

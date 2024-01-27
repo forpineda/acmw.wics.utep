@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="ACMW Square.jpeg" type="image/jpeg">
+    <title>ACM-W WICS @ UTEP</title>
+    <link rel="stylesheet" href="reset.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="reset-webview.css" type="text/css">
+
+<style>
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Add the styles for the modal content */
+  .modal-content {
+    background-color: lightsteelblue;
+    color: black;
+    text-align: center;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Adjust the width of the text container within the modal */
+  #modal-text-container {
+    width: 20rem;
+  }
+
+  /* Add the styles for the revealable elements */
+  .revealable {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+  }
+
+  /* Add the styles for the revealed elements */
+  .revealable.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+</style>
+
+  <div class="navbar ul">
+      <ul>
+	 <li><img src="ACMW Square.jpeg" alt="Logo"></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#section-impact">Impact</a></li>
+          <li><a href="About_Us.html">About Us</a></li>
+          <li><button id="theme-button">Toggle Dark Mode</button></li>
+      </ul>
+  </div>
+
+
+  <div class="header-container">
+      <div class="header-img">
+        <img src="ACMW Circle.png" height="500"  alt="Logo">
+      </div>
+  </div>
+
+</head>
+
+<body>
+    <h1>"The purpose of ACM-W WICS is to support, promote, and empower Women in Computer Science."</h1>
+    <h2>"The purpose of ACM-W WICS is to support, promote, and empower Women in Computer Science."</h2>
+    <h3> "The purpose of ACM-W WICS is to support, promote, and empower Women in Computer Science."</h3>
+
+    <p>Join the student organization that was made for YOU!</p>
+  
+    <!--<div class="section revealable" id="section-about">-->
+      <section class="diffback">
+        <h2>About Us!</h2>
+        <p>Our mission is done through outreach projects where we educate young women and girls throughout our border city of El Paso Texas, 
+        about Computer Science and technology development, as well as through in-school programs, where we create a network of support for all women in Computer Science, 
+        Undergraduate, and Graduate, as well as where we educate all students about the importance of equal representation in the Computer Science field.</p>
+      </section>
+	<p> ~~ </p>
+
+      
+      
+
+
+      <p> ~~ </p>
+    <!-- 
+
+	-->
+	<script src="index.js"></script>
+	
+<div class="footer">
+    <div class="container">
+        <div class="row">
+        
+            <div class="col-md-4">
+                <h3>CONNECT WITH US</h3>
+                <ul>
+                    <li>The University of Texas at El Paso</li>
+                    <li>Computer Science Department</li>
+                    <li>500 W University</li>
+                    <li>El Paso, Texas, 79902</li>
+                </ul>
+            </div>
+            
+            <div class="col-md-4">
+                <img src="ACMW Square.jpeg">
+            </div>
+
+            <div class="col-md-4">
+                <h3>FOLLOW US</h3>
+                <ul class="social-icons">
+                    <!--<div class="icon-container">-->
+                      <li><img src="facebook.png" class="icon" width="65" height="65" data-destination="https://www.facebook.com/acmwwics/" onclick="redirectToPage(this)"></li>
+                      <li><img src="instagram.png" class="icon" width="70" height="70" data-destination="https://www.instagram.com/acmw.wics.utep/" onclick="redirectToPage(this)"></li>
+                      <li><img src="icon.png" class="icon" width="70" height="70" data-destination="https://minetracker.utep.edu/organization/acmw" onclick="redirectToPage(this)"></li>
+                      <li><img src="white email.png" class="icon" width="70" height="70" data-destination="mailto:acmw@utep.edu" onclick="redirectToPage(this)"></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+	
+    
+
+  <div id="thanks-modal" class="modal">
+    <div class="modal-content">
+      <div id="modal-text-container">
+        <p id="thanks-modal-content">Thank you for supporting our cause, <span id="modal-person-name"></span>!</p>
+      </div>
+      <img src="Vector.jpeg" alt="Modal Image" id="modal-image">
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+
+</body>
+</html>
