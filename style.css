@@ -2,59 +2,82 @@ html{}
 /* Part 1: Navbar */
 
 /* General style rule set for all items in ul */
-.navbar ul {
-  background-color: #005E7D;
-  text-align: center; 
-  padding: 10px 0;
-  font-size: 16px; 
-  list-style-type: none;
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  margin-top: 0px;
-  z-index: 1000;
-  color: white;
-  display: flex; /* Use flexbox for centering */
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #005E7D;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
+
+/* Logo */
 .navbar img {
-  max-width: 100px;
-  height: auto;
-  width: 80%;
-  border-radius: 10%;
+    max-width: 100px;
+    height: auto;
+    width: 80%;
+    border-radius: 10%;
 }
 
-/* Style rule set for individual li */
+/* Navigation list */
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Navigation items */
 .navbar ul li {
-  color: white;
-  margin: 0px;
-  margin-top: 0px;
-  display: inline-block; /* Align list items horizontally */
+    margin: 0;
 }
 
-
-/* Style rule set for individual li link */
+/* Navigation links */
 .navbar ul li a {
-    font-family: bungee;
+    font-family: 'Bungee', sans-serif;
     text-align: center;
     font-size: 20px;
-    display: block;
     text-decoration: none;
     color: lightpink;
     padding: 10px 15px;
-    margin-top: 0px;
+    border-radius: 5px; /* Add rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
 }
 
-/* Style rule set for hovered link */
+/* Hover effect */
 .navbar ul li a:hover {
-  /*background-color: #555; */
-  text-align: center;
-  color: white;
-  font-weight: bold;
-  margin-top: 0px;
+    color: white;
+    background-color: #003C4E; /* Darker background on hover */
+    font-weight: bold;
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .navbar ul {
+        margin-top: 10px;
+    }
+
+    .navbar ul li {
+        margin-bottom: 10px;
+    }
+
+    .navbar ul li:not(:first-child) {
+        margin-right: 0;
+    }
+}
+
+
+
 
 /* Part 2: Flexbox */
 
@@ -113,13 +136,13 @@ body {
 */
 h1 {
   font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 50px;
+    font-size: 40px;
     color: #6A0572;
   text-align: center;
 }
 h2 {
   font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 40px;
+    font-size: 50px;
     color: midnightblue;
   text-align: center;
 }
@@ -203,6 +226,8 @@ button {
   padding: 15px 32px;
   cursor: pointer;
 }
+
+/*Slide Pictures (header)*/
 .header-container {
   position: relative;
   overflow: hidden;
@@ -212,57 +237,47 @@ button {
   padding: 20px;
   text-align: center;
   padding-top: 30px;
-  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
-  margin-top: 100px;
+  margin-top: 74px;
+  margin-left: -20px;
+  width: 100%;
 }
-.header-img img{
-  max-width: 100%; /* Use 100% to make sure the image stays within its container */
-  height: auto;
-  border-radius: 50%;
-  opacity: 0; /* Initially hide all images */
+.header-img {
+  width: 100%;
+  height: 711px; 
+  overflow: hidden;
+  position: relative;
+}
+.header-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
   position: absolute;
   top: 0;
   left: 0;
-  transition: opacity 1s ease-in-out; /* Add a smooth transition effect */
+  transition: opacity 1s ease-in-out;
 }
-/* Keyframes for the slideshow effect */
+.header-img img.active {
+  opacity: 1;
+}
 @keyframes fadeInOut {
-  0% {
+  0%, 100% {
     opacity: 0;
   }
-  25% {
+  25%, 75% {
     opacity: 1;
-  }
-  75% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
   }
 }
-/* Apply the animation to each image with a delay for the timing */
 .header-img img:nth-child(1) {
-  animation: fadeInOut 12s infinite 0s; /* Change the duration and delay accordingly */
+  animation: fadeInOut 12s infinite 0s;
 }
-
 .header-img img:nth-child(2) {
-  animation: fadeInOut 12s infinite 4s; /* Adjust the delay to sync with the first image */
+  animation: fadeInOut 12s infinite 2s;
 }
-
 .header-img img:nth-child(3) {
-  animation: fadeInOut 12s infinite 8s; /* Adjust the delay to sync with the second image */
-}
-
-.header-item:nth-of-type(1) {
-  float: left;
-  width: 35%;
-}
-
-.header-item:nth-of-type(2) {
-  float: right;
-  width: 65%;
+  animation: fadeInOut 12s infinite 8s;
 }
 .header-button {
   background-color: darkred;
@@ -273,10 +288,22 @@ button {
   display: inline-block;
   text-align: center;
   font-size: 18px;
-  cursor: pointer; /* Correct the typo in cursor property */
+  cursor: pointer;
   border: 2px solid black;
 }
+.prev-button, .next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.prev-button {
+  left: 20px;
+}
+.next-button {
+  right: 20px;
+}
 
+/*Footer*/
 .footer {
     background-color: black;
     color: #fff;
@@ -284,46 +311,38 @@ button {
     font-family: 'Montserrat', monospace;
     font-weight: bold;
 }
-
 .footer .container {
     max-width: 90%;
     margin: 0 auto;
     padding: 0 15px;
 }
-
 .footer .row {
     display: flex;
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
 }
-
 .footer .col-md-4 {
     flex: 1;
     max-width: 33%;
     text-align: center;
 }
-
 .footer h3 {
     margin-bottom: 15px;
     color: #6A0572;
 }
-
 .footer ul {
     list-style: none;
     margin: 0px;
     padding: 0;
 }
-
 .footer li {
     margin-bottom: 10px;
 }
-
 .social-icons li {
     display: inline-block;
     margin-right: 10px;
 }
-
 .social-icons li a {
     color: white;
     font-size: 30px;
@@ -392,7 +411,7 @@ let animation {
   transitionTimingFunction: 'ease'
 };
 
-/* Add this to your CSS file */
+
 
 /* Style for revealable elements */
 .revealable {
@@ -485,8 +504,8 @@ body.modal-open {
   opacity: 1;
 }
 
-/* Officer Pictures*/
 
+/* Officer Pictures*/
 .container{
   width: auto; /* 100% */
   height: auto;
