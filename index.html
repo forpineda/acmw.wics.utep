@@ -5,55 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="ACMW Square.jpeg" type="image/jpeg">
     <title>ACM-W WICS @ UTEP</title>
-    <link rel="stylesheet" href="reset.css" type="text/css">
     <link rel="stylesheet" href="style.css" type="text/css">
-    <link rel="stylesheet" href="reset-webview.css" type="text/css">
 
-<style>
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 2;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  /* Add the styles for the modal content */
-  .modal-content {
-    background-color: lightsteelblue;
-    color: black;
-    text-align: center;
-    font-size: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  /* Adjust the width of the text container within the modal */
-  #modal-text-container {
-    width: 20rem;
-  }
-
-  /* Add the styles for the revealable elements */
-  .revealable {
-    position: relative;
-    transform: translateY(150px);
-    opacity: 0;
-    transition: all 2s ease;
-  }
-
-  /* Add the styles for the revealed elements */
-  .revealable.active {
-    transform: translateY(0);
-    opacity: 1;
-  }
-</style>
+  
 
   <div class="navbar">
     <img src="ACMW Square.jpeg" alt="Logo">
@@ -66,17 +20,15 @@
   </div>
 
 
-
-
   <div class="header-container">
-  <div class="header-img">
-    <img src="women.jpg" alt="Image 1" />
-    <img src="hallowen.jpg" alt="Image 2" />
-    <img src="google.jpg" alt="Image 3" />
-  </div>
+      <div class="header-img">
+        <img src="WiCS.jpg" alt="Image 1" />
+        <img src="women.jpg" alt="Image 2" />
+        <img src="hallowen.jpg" alt="Image 3" />
+      </div>
   <!--<button class="header-button prev-button">Previous</button>
   <button class="header-button next-button">Next</button> -->
-</div>
+  </div>
 
 
 </head>
@@ -84,17 +36,19 @@
 <body>
     <h2>ACM-W Women in Computer Science at UTEP</h2>
     <h1>"The purpose of ACM-W WICS is to support, promote, and empower Women in Computer Science."</h1>
-    
-      <section class="diffback">
-        <h2>About Us!</h2>
-        <p>Our mission is done through outreach projects where we educate young women and girls throughout our border city of El Paso Texas, 
+
+    <section class="diffback">
+      <h2>About Us!</h2>
+      <p>Our mission is done through outreach projects where we educate young women and girls throughout our border city of El Paso Texas, 
         about Computer Science and technology development, as well as through in-school programs, where we create a network of support for all women in Computer Science, 
         Undergraduate, and Graduate, as well as where we educate all students about the importance of equal representation in the Computer Science field.</p>
-      </section>
+    </section>
+  
+    
 
      <p>Join the student organization that was made for YOU!</p>
     
-	<script src="index.js"></script>
+	
 	
 <div class="footer">
     <div class="container">
@@ -132,14 +86,14 @@
 	
     
 
-  <div id="thanks-modal" class="modal">
+  <!--<div id="thanks-modal" class="modal">
     <div class="modal-content">
       <div id="modal-text-container">
         <p id="thanks-modal-content">Thank you for supporting our cause, <span id="modal-person-name"></span>!</p>
       </div>
       <img src="Vector.jpeg" alt="Modal Image" id="modal-image">
     </div>
-  </div>
+  </div>-->
 
   <script src="index.js"></script>
 
