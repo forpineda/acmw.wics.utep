@@ -21,6 +21,7 @@ html{}
     height: auto;
     width: 80%;
     border-radius: 10%;
+    margin-left: 150px;
 }
 
 /* Navigation list */
@@ -29,6 +30,7 @@ html{}
     margin: 0;
     padding: 0;
     display: flex;
+    margin-right: 150px;
 }
 
 /* Navigation items */
@@ -38,14 +40,15 @@ html{}
 
 /* Navigation links */
 .navbar ul li a {
-    font-family: 'Bungee', sans-serif;
+    font-family: bungee;
     text-align: center;
-    font-size: 20px;
+    font-size: 30px;
     text-decoration: none;
     color: lightpink;
     padding: 10px 15px;
     border-radius: 5px; /* Add rounded corners */
     transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    margin-right: 50px;
 }
 
 /* Hover effect */
@@ -155,7 +158,7 @@ h3 {
 p {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 25px;
-    color: #616161;
+    color: #000000;
   text-align: center;
 }
 a:link {
@@ -178,9 +181,9 @@ a:active {
 
 .diffback{
   background-color: lightpink;  
-  color: #fff; /* Set text color to be visible on the background */
+  color: #000080; /* Set text color to be visible on the background */
   padding: 20px; /* Adjust padding based on your design */
-  border: 10px solid #333; /* Add a border with a color of your choice */
+  border: 10px solid #000080; /* Add a border with a color of your choice */
   border-radius: 10px; /* Optional: Add rounded corners for a softer look */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -243,9 +246,10 @@ button {
   margin-left: -20px;
   width: 100%;
 }
+
 .header-img {
   width: 100%;
-  height: 711px; 
+  height: 711px;
   overflow: hidden;
   position: relative;
 }
@@ -253,32 +257,44 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0;
+  opacity: 1; /* Set initial opacity to 1 */
   position: absolute;
   top: 0;
   left: 0;
   transition: opacity 1s ease-in-out;
 }
+
 .header-img img.active {
   opacity: 1;
 }
+
 @keyframes fadeInOut {
-  0%, 100% {
+  0%, 25% {
     opacity: 0;
   }
-  25%, 75% {
+  26%, 50% {
+    opacity: 1;
+  }
+  51%, 75% {
+    opacity: 0;
+  }
+  76%, 100% {
     opacity: 1;
   }
 }
+
 .header-img img:nth-child(1) {
   animation: fadeInOut 12s infinite 0s;
 }
+
 .header-img img:nth-child(2) {
-  animation: fadeInOut 12s infinite 2s;
+  animation: fadeInOut 12s infinite 4s;
 }
+
 .header-img img:nth-child(3) {
   animation: fadeInOut 12s infinite 8s;
 }
+
 .header-button {
   background-color: darkred;
   color: #fff;
@@ -621,4 +637,13 @@ body.modal-open {
 .container .card:hover .pic{
   filter: grayscale(0);
   width: 470px;
+}
+
+.revealable {
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+.revealable.active {
+  opacity: 1;
 }
